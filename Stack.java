@@ -15,6 +15,7 @@ public class Stack<E> {
 		this.linkedlist.add(node);	
 	}
 	/**
+	 * Usecase 2
 	 * Function is used to view the top element of the stack
 	 * @return
 	 */
@@ -23,9 +24,25 @@ public class Stack<E> {
 		this.linkedlist.add(new MyNode<E>(peekElement));
 		return peekElement;
 	}
+	/**
+	 * Usecase 2
+	 * Function removes the top of the stack element
+	 * 
+	 */
+	public void pop() {
+		if(!(this.linkedlist.isEmpty())) {
+			this.linkedlist.pop();
+		}
+	}
 	private void printStack() {
 		this.linkedlist.printNodes();
 		System.out.println();
+	}
+	private boolean isEmpty() {
+		return this.linkedlist.isEmpty();
+	}
+	private int size() {
+		return this.linkedlist.size();
 	}
 	public static void main(String[] args) {
 		Stack<Integer> stack = new Stack<Integer>();
@@ -36,6 +53,8 @@ public class Stack<E> {
 		stack.push(secondNode);
 		stack.push(firstNode);
 		stack.printStack();
+		stack.pop();
 		System.out.println(stack.peek()); //Returns the top element of the stack
+		System.out.println(stack.size());
 	}
 }
