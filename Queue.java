@@ -22,6 +22,21 @@ public class Queue<E> {
 		this.linkedlist.printNodes();
 		System.out.println();
 	}
+	/**
+	 * Usecase 4
+	 * Function removes item from the queue
+	 * @return
+	 */
+	public E deque() {
+		E dequedItem = this.linkedlist.pop();
+		return dequedItem;
+	}
+	private boolean isEmpty() {
+		return this.linkedlist.isEmpty();
+	}
+	private int size() {
+		return this.linkedlist.size();
+	}
 	public static void main(String[] args) {
 		Queue<Integer> queue = new Queue<Integer>();
 		MyNode<Integer> firstNode = new MyNode<Integer>(56);
@@ -30,6 +45,7 @@ public class Queue<E> {
 		queue.enque(firstNode);
 		queue.enque(secondNode);
 		queue.enque(thirdNode);
+		queue.deque();
 		queue.printQueue();
 	}
 }
