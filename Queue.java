@@ -34,18 +34,18 @@ public class Queue<E> {
 	private boolean isEmpty() {
 		return this.linkedlist.isEmpty();
 	}
-	private int size() {
+	public int size() {
 		return this.linkedlist.size();
 	}
-//	public static void main(String[] args) {
-//		Queue<Integer> queue = new Queue<Integer>();
-//		MyNode<Integer> firstNode = new MyNode<Integer>(56);
-//		MyNode<Integer> secondNode = new MyNode<Integer>(30);
-//		MyNode<Integer> thirdNode = new MyNode<Integer>(70);
-//		queue.enque(firstNode);
-//		queue.enque(secondNode);
-//		queue.enque(thirdNode);
-//		queue.deque();
-//		queue.printQueue();
-//	}
+	public static void main(String[] args) {
+		Queue<Integer> queue = new Queue<Integer>();
+		MyNode<Integer> firstNode = new MyNode<Integer>(56);
+		MyNode<Integer> secondNode = new MyNode<Integer>(30);
+		MyNode<Integer> thirdNode = new MyNode<Integer>(70);
+		queue.enque(firstNode);
+		queue.enque(secondNode);
+		queue.enque(thirdNode);
+		queue.deque();
+		queue.printQueue();
+	}
 }
