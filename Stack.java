@@ -34,14 +34,14 @@ public class Stack<E> {
 			this.linkedlist.pop();
 		}
 	}
-	private void printStack() {
+	public void printStack() {
 		this.linkedlist.printNodes();
 		System.out.println();
 	}
 	private boolean isEmpty() {
 		return this.linkedlist.isEmpty();
 	}
-	private int size() {
+	public int size() {
 		return this.linkedlist.size();
 	}
 	public static void main(String[] args) {
